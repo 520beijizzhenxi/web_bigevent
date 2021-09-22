@@ -25,11 +25,13 @@
           <!-- 用户名 -->
           <div class="layui-form-item">
             <i class="layui-icon layui-icon-username"></i>
+            <!-- lay-verify="required"表示对表单进行验证，required表示必填项  -->
             <input type="text" name="username" required lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input" />
           </div>
           <!-- 密码 -->
           <div class="layui-form-item">
             <i class="layui-icon layui-icon-password"></i>
+            <!-- pwd是js文件中自定义的校验规则 -->
             <input type="password" name="password" required lay-verify="required|pwd" placeholder="请输入密码" autocomplete="off" class="layui-input" />
           </div>
           <!-- 登录按钮 -->
@@ -38,6 +40,7 @@
             <button class="layui-btn layui-btn-fluid layui-btn-normal" lay-submit>登录</button>
           </div>
           <div class="layui-form-item links">
+            <!-- href="javascript:;" 防止页面跳转 -->
             <a href="javascript:;" id="link_reg">去注册账号</a>
           </div>
         </form>
@@ -59,6 +62,7 @@
           <!-- 密码确认框 -->
           <div class="layui-form-item">
             <i class="layui-icon layui-icon-password"></i>
+            <!-- 表单验证支持多条规则的验证，用|隔开，repwd用于校验两次密码是否一致 -->
             <input type="password" name="repassword" required lay-verify="required|pwd|repwd" placeholder="再次确认密码" autocomplete="off" class="layui-input" />
           </div>
           <!-- 注册按钮 -->
